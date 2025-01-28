@@ -12,7 +12,9 @@ function draw() {
   fill(100, 100, 100)
   rect(5, 5, 220, 110);
   
+  
   stroke(0);
+  strokeWeight(1);
   fill(0, 0, 100);
   circle(60, 60, 90);
 
@@ -95,37 +97,39 @@ function draw() {
   
   stroke(0, 0, 100);
   strokeWeight(3);
-  fill(100, 100, 60);
+  fill(100, 100, 50);
   circle(113, 750, 100);
 
   //star
 
-  push(); // Save the current drawing settings
-  translate(150, 750); // Move the star to the desired position (x: 150, y: 650)
+  push(); 
+  translate(112, 750); 
 
-  stroke(0, 0, 100); // White border
-  strokeWeight(3); // Border thickness
-  fill(0, 100, 100); // Red fill
-  drawStar(0, 0, 30, 60, 5); // Draw the star at (0, 0) with inner radius 30, outer radius 60, and 5 points
-  pop(); // Restore previous drawing settings
+  stroke(0, 0, 100); 
+  strokeWeight(3);  
+  fill(0, 100, 100); 
 
-  // Function to draw a star
+  drawStar(0, 0, 25 * 0.85, 60 * 0.85, 5); 
+
+  pop();
+
   function drawStar(x, y, radius1, radius2, npoints) {
-  let angle = TWO_PI / npoints; // Angle between star points
-  let halfAngle = angle / 2.0; // Half-angle for inner points
+    let angle = TWO_PI / npoints;
+    let halfAngle = angle / 2.0; 
   
   beginShape();
-  for (let a = 0; a < TWO_PI; a += angle) {
-    // Outer point
+  for (let a = -PI/2; a < TWO_PI - PI/2; a += angle) { 
+    // Outer 
     let sx = x + cos(a) * radius2;
     let sy = y + sin(a) * radius2;
     vertex(sx, sy);
-    // Inner point
+    // Inner 
     sx = x + cos(a + halfAngle) * radius1;
     sy = y + sin(a + halfAngle) * radius1;
     vertex(sx, sy);
   }
   endShape(CLOSE);
+  
 } 
 }
 
