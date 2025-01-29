@@ -5,13 +5,12 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 100);
+  background(0, 0, 90);
 
   //example 1//
   noStroke();
   fill(100, 100, 100)
   rect(5, 5, 220, 110);
-  
   
   stroke(0);
   strokeWeight(1);
@@ -25,18 +24,23 @@ function draw() {
 
   //example 2
 
+  //background rectangle
+  noStroke();
+  fill(0, 0, 100)
+  rect(5, 180, 200, 190);
+
   //red
   fill(0, 100, 100, 200);
-  circle(150, 250, 100);
+  circle(105, 250, 100);
 
   //blue
   fill(240, 100, 100, 200);
   alpha(200)
-  circle(120, 300, 100);
+  circle(75, 300, 100);
 
   //green
   fill(100, 100, 100, 200);
-  circle(180, 300, 100);
+  circle(135, 300, 100);
 
   //example 3
 
@@ -56,7 +60,6 @@ function draw() {
   //ghost
 
   //rectangle 
-
   noStroke()
   fill(0, 100, 100);
   rect(130, 500, 85, 50);
@@ -66,42 +69,34 @@ function draw() {
   ellipse(172.5, 505, 85, 85);
 
   //eyeballL
-
   fill(0, 0, 100);
   circle(150, 505, 25, 20);
 
   //eyeballR
-
   fill(0, 0, 100);
   circle(195, 505, 25, 20);
 
   //eyeballpupilL
-
   fill(240, 100, 100);
   circle(150, 505, 15, 20);
 
   //eyeballpupilR
-
   fill(240, 100, 100);
   circle(195, 505, 15, 20);
-
 
   //example 4
 
   //outer square
-
   fill(240, 100, 50);
   rect(5, 650, 220, 200)
 
   //inner circle
-  
   stroke(0, 0, 100);
   strokeWeight(3);
   fill(100, 100, 50);
   circle(113, 750, 100);
 
   //star
-
   push(); 
   translate(112, 750); 
 
@@ -128,8 +123,9 @@ function draw() {
     sy = y + sin(a + halfAngle) * radius1;
     vertex(sx, sy);
   }
+
   endShape(CLOSE);
-  
+
 } 
 }
 
