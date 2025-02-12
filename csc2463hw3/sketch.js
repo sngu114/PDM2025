@@ -51,9 +51,9 @@ class Character {
     this.addAnimation("stand", new SpriteAnimation(spritesheets, 0, 0, 1));
     this.addAnimation("right", new SpriteAnimation(spritesheets, 0, 0, 6));
     
-    let leftAnim = new SpriteAnimation(spritesheets, 0, 0, 6);
-    leftAnim.flipped = true;
-    this.addAnimation("left", leftAnim);
+    let leftAnimation = new SpriteAnimation(spritesheets, 0, 0, 6);
+    leftAnimation.flipped = true;
+    this.addAnimation("left", leftAnimation);
   }
 
   addAnimation(key, animation) {
