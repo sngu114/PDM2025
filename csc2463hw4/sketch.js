@@ -25,9 +25,9 @@ let Speed = 3;
 
 function preload() {
   
-  bugsprite = loadImage("media/catbug.png");
-  bugSquishedSprite = loadImage("media/bugsquished.png");
-  gameFont = loadFont("media/PressStart2P-Regular.ttf");
+  bugsprite = loadImage("MEDIA/catbug.png");
+  bugSquishedSprite = loadImage("MEDIA/bugsquished.png");
+  gameFont = loadFont("MEDIA/PressStart2P-Regular.ttf");
 
 }
 
